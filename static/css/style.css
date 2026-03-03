@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* Glass card */
+.container{
+    width: 100%;
+    max-width: 520px;
+
+    backdrop-filter: blur(16px);
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 18px;
+    padding: 35px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.08);
+
+    color: white;
+}
+
+/* Title */
+h1{
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg,#00e5ff,#7cffcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Form layout */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Labels */
+label{
+    font-size: 14px;
+    text-align: left;
+    opacity: .85;
+}
+
+/* Inputs */
+input{
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    transition: 0.25s;
+}
+
+input::placeholder{
+    color: rgba(255,255,255,0.6);
+}
+
+input:focus{
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.02);
+}
+
+/* Predict button */
+button{
+    margin-top: 10px;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: none;
+
+    font-weight: 500;
+    font-size: 15px;
+
+    background: linear-gradient(135deg,#00e5ff,#00c6ff);
+    color: #00242a;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,229,255,0.4);
+}
+
+/* Train button */
+.train-button{
+    background: linear-gradient(135deg,#7cffcb,#00c9a7);
+}
+
+.train-button:hover{
+    box-shadow: 0 8px 20px rgba(124,255,203,0.35);
+}
+
+/* Result box */
+.result{
+    margin-top: 25px;
+    padding: 18px;
+
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    animation: fadeIn 0.5s ease;
+}
+
+.result h2{
+    color: #7cffcb;
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
